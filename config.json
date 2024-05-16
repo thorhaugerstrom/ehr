@@ -1,0 +1,13 @@
+{
+  "app_name": "Curix",
+  "version": "1.0.0",
+  "debug_mode": true,
+  "database": {
+    "type": "sqlite",
+    "file_path": "path/to/your/database.db"
+  },
+  "logging": {
+    "log_level": "info",
+    "log_file": "app.log"
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curex - EMR Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Curex</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Patients</a></li>
+                    <li><a href="#">Appointments</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section class="welcome-message">
+            <h2>Welcome to Curex</h2>
+            <p>This is your dashboard. Here, you can manage patients and appointments for your clinic.</p>
+        </section>
+        <div class="quick-actions">
+            <div class="quick-action">
+                <a id="createPatientBtn" href="#">Create New Patient</a> <!-- Add id="createPatientBtn" to the anchor element -->
+            </div>
+            <div class="quick-action">
+                <a href="#">Schedule Appointment</a>
+            </div>
+            <div class="quick-action">
+                <a href="#">View Today's Appointments</a>
+            </div>
+        </div>
+        <div class="dashboard-summary">
+            <h2>Dashboard Summary</h2>
+            <!-- Display summary information here -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Curex. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- Create Patient Modal -->
+<div id="createPatientModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create New Patient</h2>
+        <form id="createPatientForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+</div>
+<script src="createPatientModal.js"></script>
+</body>
+</html>

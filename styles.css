@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #ecf0f1;
+    --text-color: #333;
+    --button-gradient-start: #3498db;
+    --button-gradient-end: #2980b9;
+    --header-gradient-start: #2ecc71;
+    --header-gradient-end: #27ae60;
+    --footer-gradient-start: #2ecc71;
+    --footer-gradient-end: #27ae60;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Using Google Font Roboto for a modern look */
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1; /* Set a light background color */
+}
+
+header {
+    background: linear-gradient(to right, var(--header-gradient-start), var(--header-gradient-end));
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.welcome-message {
+    margin-bottom: 20px;
+}
+
+.quick-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.quick-action {
+    background: linear-gradient(to right, var(--button-gradient-start), var(--button-gradient-end));
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(30% - 10px);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.quick-action:hover {
+    transform: translateY(-3px); /* Add a slight lift effect on hover */
+}
+
+.quick-action a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dashboard-summary {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background: linear-gradient(to right, var(--footer-gradient-start), var(--footer-gradient-end));
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+

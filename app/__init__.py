@@ -1,5 +1,5 @@
-import flask
-import sqlite3
+from flask import Flask
+from .models import init_db, get_db_connection
 
 def create_app():
     app = Flask(__name__)
@@ -9,8 +9,6 @@ def create_app():
 
     return app
 
-def get_db_connection():
-    conn = sqlite3.connect('patients.db')
-    conn.row_factory = sqlite3.Row
-    return conn
+
+
 
